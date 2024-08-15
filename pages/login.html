@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../dist/img/TrailToolLogo.png" type="image/png">
+
+  <title>Trail Tool BackOffice | Log in</title>
+
+  <!-- Initially hide the body content while keeping the layout -->
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
+
+  <!-- Include common styles and scripts -->
+  <div id="common-styles"></div>
+
+  <script>
+    // Load the common HTML
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('shared/common.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('common-styles').innerHTML = data;
+
+          // Once the common styles are loaded, make the body visible
+          document.body.style.visibility = 'visible';
+        })
+        .catch(error => console.error('Error loading common styles:', error));
+    });
+  </script>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="../index2.html"><b>Trail</b>Tool</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Sign in to start your session</p>
+
+      <form action="login.php" method="post">
+        <div class="input-group mb-3">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                </div>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="icheck-primary">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">
+                        Remember Me
+                    </label>
+                </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </div>
+            <!-- /.col -->
+        </div>
+    </form>
+    
+
+      <p class="mb-1">
+        <a href="forgot-password.html">I forgot my password</a>
+      </p>
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
+
+</body>
+</html>
