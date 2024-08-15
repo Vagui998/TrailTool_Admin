@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="dist/img/TrailToolLogo.png" type="image/png">
+  <title>Trail Tool BackOffice</title>
+  <script>
+    // Check if the user is authenticated
+    if (!sessionStorage.getItem('isAuthenticated')) {
+      window.location.assign('pages/login.html');
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
