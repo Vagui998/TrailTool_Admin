@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['username'] = $username;
 
         // Redirect to dashboard or another secure page
-        header("Location: ./examples/blank.php");
+        header("Location: ./intro.php");
         exit();
     } else {
         // Invalid login attempt
