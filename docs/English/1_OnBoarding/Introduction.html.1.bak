@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        img {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>    <h1 style="margin-bottom: 16px; line-height: 1.4;"><br></h1><h1 style="margin-bottom: 16px; font-family: Roboto, sans-serif; font-weight: 700; line-height: 1.4; color: rgb(51, 51, 51); font-size: 32px;">
+    </h1>
+</body>
+
+</html>

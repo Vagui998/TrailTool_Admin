@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        img {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>    <h1 style="margin-bottom: 16px; line-height: 1.4;"><font color="#333333" face="Roboto, sans-serif"><span style="font-size: 32px;"><b>Transdisciplinary Education is a future-oriented type of education, centred around real world problems. This TRAIL is designed as a real mountain trail, guiding you through the various stages of discovering, designing and participating in Transdisciplinary education - from the discovering phase in the valley to making real world impact on the top. The torches and resting camps which you will encounter on the way, provide research-based knowledge, ready to use tools, inspiring examples and reflection questions.&nbsp;</b></span></font></h1><h1 style="margin-bottom: 16px; line-height: 1.4;"><font color="#333333" face="Roboto, sans-serif"><span style="font-size: 32px;"><b>&nbsp;</b></span></font></h1><h1 style="margin-bottom: 16px; line-height: 1.4;"><font color="#333333" face="Roboto, sans-serif"><span style="font-size: 32px;"><b>The next pages explain more about the, the route map, resting stops and different roles. Almost ready to take off!&nbsp;</b></span></font></h1><div><br></div><h1 style="margin-bottom: 16px; font-family: Roboto, sans-serif; font-weight: 700; line-height: 1.4; color: rgb(51, 51, 51); font-size: 32px;">
+    </h1>
+</body>
+
+</html>
