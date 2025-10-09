@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        img {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body><div style="margin: 0px; color: rgb(0, 0, 0); font-family: &quot; font-size: 12px"><div style="margin: 0px"><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: windowtext"><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif; font-weight: bold"><span style="margin: 0px">Welcome to the </span><span style="margin: 0px">TRAILtool</span><span style="margin: 0px"> – your guide to transdisciplinary education:</span></span></p></div><div style="margin: 0px"><p style="margin: 16px 0px; color: windowtext"><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif"><span style="margin: 0px">Begin your Trail, where </span><span style="margin: 0px">you’ll</span><span style="margin: 0px"> discover what transdisciplinary education means (discover your role), build </span><span style="margin: 0px">a strong team</span><span style="margin: 0px"> (at base camp), and learn how to design, implement, and evaluate education (on the successive paths). At the camps, </span><span style="margin: 0px">you’ll</span><span style="margin: 0px"> then reflect on your journey.</span></span><span style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">&nbsp;</span></p></div><div style="margin: 0px"><p style="margin: 16px 0px; color: windowtext"><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">This web tool was developed by the research group Transdisciplinary Collaboration in Education at Avans University of Applied Sciences. We combine our own current research insights with practical tools, theory, and examples from the Netherlands and beyond.</span><span style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">&nbsp;</span></p></div><div style="margin: 0px"><p style="margin: 16px 0px; color: windowtext"><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">Our goal: to contribute to better transdisciplinary education in a playful yet scientifically grounded way.</span><span style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">&nbsp;</span></p></div><div style="margin: 0px"><p style="margin: 16px 0px; color: windowtext"><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif"><span style="margin: 0px">Do you have valuable information or examples? </span><span style="margin: 0px">Get in touch with</span><span style="margin: 0px"> us!</span></span><span style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">&nbsp;</span></p></div><div style="margin: 0px"><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: windowtext"><span lang="NL-NL" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif; font-weight: bold"><span style="margin: 0px">Objects</span><span style="margin: 0px">:</span></span><span style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">&nbsp;</span></p></div><div style="margin: 0px"><ul role="list" style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-family: verdana"><li aria-setsize="-1" role="listitem" style="margin: 0px 0px 0px 24px; font-size: 16px; font-family: Verdana, Verdana_MSFontService, sans-serif"><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: windowtext"><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif; font-weight: bold"><span style="margin: 0px">Torches:</span></span><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif"><span style="margin: 0px"> Click</span><span style="margin: 0px"> on these information-rich torches: under each torch, </span><span style="margin: 0px">you’ll</span><span style="margin: 0px"> find an introduction, theory, and practical tools and examples.</span></span><span style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">&nbsp;</span></p></li></ul></div><div style="margin: 0px"><ul role="list" style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-family: verdana"><li aria-setsize="-1" role="listitem" style="margin: 0px 0px 0px 24px; font-size: 16px; font-family: Verdana, Verdana_MSFontService, sans-serif"><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: windowtext"><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif; font-weight: bold">Individual routes:</span><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif"> Select your role to receive specific information.</span><span style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">&nbsp;</span></p></li></ul></div><div style="margin: 0px"><ul role="list" style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-family: verdana"><li aria-setsize="-1" role="listitem" style="margin: 0px 0px 0px 24px; font-size: 16px; font-family: Verdana, Verdana_MSFontService, sans-serif"><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: windowtext"><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif; font-weight: bold">Tents:</span><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif"> Enter the camps to first form your team and then reflect on your journey.</span><span style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">&nbsp;</span></p></li></ul></div><div style="margin: 0px"><ul role="list" style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-family: verdana"><li aria-setsize="-1" role="listitem" style="margin: 0px 0px 0px 24px; font-size: 16px; font-family: Verdana, Verdana_MSFontService, sans-serif"><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: windowtext"><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif; font-weight: bold">Backpack:</span><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif"> Save all information and download it at the end of your journey.</span><span style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">&nbsp;</span></p></li></ul></div></div><div style="margin: 0px; color: rgb(0, 0, 0); font-family: &quot; font-size: 12px"><div style="margin: 0px"><ul role="list" style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-family: verdana"><li aria-setsize="-1" role="listitem" style="margin: 0px 0px 0px 24px; font-size: 16px; font-family: Verdana, Verdana_MSFontService, sans-serif"><p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: windowtext"><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif; font-weight: bold">Index:</span><span lang="EN-US" style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif"> Navigate to specific parts of the journey if you want to revisit something.</span><span style="margin: 0px; font-size: 16px; line-height: 30.225px; font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif">&nbsp;</span></p></li></ul></div></div></body>
+
+</html>

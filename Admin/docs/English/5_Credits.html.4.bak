@@ -1,0 +1,166 @@
+<html><head><title>What to Learn Base Camp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive HTML Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #35424a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background: #35424a;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #e8491d;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        aside {
+            float: right;
+            width: 30%;
+            margin-top: 10px;
+            padding: 20px;
+            background: #e8491d;
+            color: white;
+        }
+        article {
+            float: left;
+            width: 65%;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            clear: both;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+
+
+<header>
+    <h1>My Comprehensive HTML Page</h1>
+    <p>Combining various HTML features in one document</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+    <article>
+        <h2>About Us</h2>
+        <p>This is an example of a comprehensive HTML document. Below, you can see different HTML elements such as headings, paragraphs, images, lists, forms, tables, and more.</p>
+        
+        <h3>Text Formatting</h3>
+        <p><strong>Bold Text</strong></p>
+        <p><em>Italic Text</em></p>
+        <p><u>Underlined Text</u></p>
+        <p><mark>Highlighted Text</mark></p>
+        <p><small>Small Text</small></p>
+        <p>This is a <a href="#link">link</a> to nowhere.</p>
+
+        <h3>Image Example</h3>
+        <img src="https://via.placeholder.com/400x200" alt="Sample Image" style="max-width:100%;height:auto;">
+
+        <h3>List Examples</h3>
+        <h4>Ordered List</h4>
+        <ol>
+            <li>First Item</li>
+            <li>Second Item</li>
+            <li>Third Item</li>
+        </ol>
+        <h4>Unordered List</h4>
+        <ul>
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+        </ul>
+
+        <h3>Table Example</h3>
+        <table>
+            <tbody><tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>25</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>30</td>
+                <td>Los Angeles</td>
+            </tr>
+        </tbody></table>
+
+        <h3>Form Example</h3>
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </article>
+
+    <aside>
+        <h2>Side Information</h2>
+        <p>This is some additional information that is displayed in the sidebar. You can use this section to highlight important news, updates, or advertisements.</p>
+    </aside>
+</div>
+
+<footer>
+    <p>Footer Content © 2024</p>
+</footer>
+
+
+
+</body></html>

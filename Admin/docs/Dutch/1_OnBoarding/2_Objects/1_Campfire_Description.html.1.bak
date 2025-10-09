@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampvuur</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        img {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>    <h1 style="margin-bottom: 16px; font-family: Roboto, sans-serif; font-weight: 700; line-height: 1.4; color: rgb(51, 51, 51); font-size: 32px;"><span class="NormalTextRun SCXW108862404 BCX8" style="-webkit-user-drag: none; -webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; user-select: text; color: rgb(0, 0, 0); font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif; font-size: 21.3333px; font-variant-ligatures: none; font-weight: 400; white-space-collapse: preserve;">Tenten: In deze kampen kan je </span><span class="NormalTextRun SCXW108862404 BCX8" style="-webkit-user-drag: none; -webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; user-select: text; color: rgb(0, 0, 0); font-family: Verdana, Verdana_EmbeddedFont, Verdana_MSFontService, sans-serif; font-size: 21.3333px; font-variant-ligatures: none; font-weight: 400; white-space-collapse: preserve;">eerst je team vormen en vervolgens reflecteren op je reis.</span></h1><h1 style="margin-bottom: 16px; font-family: Roboto, sans-serif; font-weight: 700; line-height: 1.4; color: rgb(51, 51, 51); font-size: 32px;">
+    </h1>
+</body>
+
+</html>

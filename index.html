@@ -1,17 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="dist/img/TrailToolLogo.png" type="image/png">
-  <title>Trail Tool BackOffice</title>
-  <script>
-    // Check if the user is authenticated
-    if (!sessionStorage.getItem('isAuthenticated')) {
-      window.location.assign('pages/login.php');
-    }
-  </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
+    <title>TrailTool</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="icon" href="Images/Logo_Trailtool.png" type="image/png">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fde2d2;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      #content-wrapper {
+        width: 100%;
+        max-width: 1400px; /* Increased from 1200px */
+        margin: auto;
+        background-color: #fff6e5;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+      }
+
+      #language-switcher {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        gap: 5px;
+        z-index: 10;
+      }
+
+      #language-switcher button {
+        padding: 8px 12px;
+        border: 2px solid #e1a96d;
+        background-color: transparent;
+        color: #8c6239;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        min-width: 45px;
+      }
+
+      #language-switcher button.active {
+        background-color: #e1a96d;
+        color: white;
+      }
+
+      #language-switcher button:hover:not(.active) {
+        background-color: rgba(225, 169, 109, 0.1);
+      }
+
+      #logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #e1a96d;
+      }
+      #logo-container img {
+        max-height: 120px;
+      }
+
+      #game-frame {
+        width: 100%;
+        max-width: 1200px; /* Increased from 980px */
+        aspect-ratio: 16 / 9;
+        border: 2px solid #e1a96d;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        position: relative;
+        /* Scale up on larger screens */
+        min-height: 500px; /* Minimum height for better visibility */
+      }
+
+      /* Enhanced responsive scaling for game frame */
+      @media (min-width: 1200px) {
+        #game-frame {
+          max-width: 1100px; /* Even larger on big screens */
+          min-height: 620px;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        #game-frame {
+          max-width: 1300px; /* Maximum size for very large screens */
+          min-height: 730px;
+        }
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      #fullscreen-button {
+        position: absolute;
+        bottom: 1%;
+        right: 1%;
+        width: 2%;
+        min-width: 20px;
+        max-width: 30px;
+        aspect-ratio: 1 / 1;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+        background: transparent;
+      }
+
+      #fullscreen-button img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      #footer {
+        width: 100%;
+        background-color: #e1a96d;
+        border-radius: 10px;
+        padding: 30px;
+        margin-top: 20px;
+        color: #fff;
+        position: relative;
+      }
+
+      #footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 30px;
+      }
+
+      #footer h3 {
+        margin: 0 0 15px 0;
+        font-size: 1.1em;
+        color: #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding-bottom: 8px;
+      }
+
+      #footer .footer-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      #footer .footer-section p, #footer .footer-section a {
+        margin: 5px 0;
+        font-size: 0.9em;
+        line-height: 1.4;
+      }
+
+      #footer a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      #footer a:hover {
+        color: #fde2d2;
+        text-decoration: underline;
+      }
+
+      #social-media {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      #social-media a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      #social-media a:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+        text-decoration: none;
+      }
+
+      #newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      #newsletter-form input[type="email"] {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.9em;
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+
+      #newsletter-form button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        background-color: #8c6239;
+        color: white;
+        font-size: 0.9em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #newsletter-form button:hover {
+        background-color: #6b4a2a;
+      }
+
+      #cc-license {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      #cc-license img {
+        height: 20px;
+      }
+
+      #credits-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 150px;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 20px;
+      }
+
+      #credits-logos .logo-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      #credits-logos img {
+        height: 100px;
+        filter: brightness(0) invert(1);
+        transition: filter 0.3s ease;
+      }
+
+      #credits-logos img:hover {
+        filter: brightness(0) invert(0.8);
+      }
+
+      #credits-logos span {
+        font-size: 0.9em;
+        text-align: center;
+        opacity: 0.8;
+        font-weight: 500;
+      }
+
+      #engine-note {
+        text-align: center;
+        font-size: 0.8em;
+        font-style: italic;
+        opacity: 0.7;
+        margin-top: 10px;
+        display: none;
+      }
+
+      #copyright {
+        text-align: center;
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 0.8);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        padding-top: 20px;
+      }
+
+      /* Mobile and tablet responsive adjustments */
+      @media (max-width: 1199px) {
+        #game-frame {
+          max-width: 980px; /* Original size for medium screens */
+          min-height: auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #content-wrapper {
+          max-width: 100%;
+          padding: 20px 15px;
+        }
+        
+        #game-frame {
+          max-width: 100%;
+          min-height: auto;
+        }
+        
+        #footer-content {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+        
+        #credits-logos {
+          flex-direction: column;
+          gap: 30px;
+        }
+        
+        #language-switcher {
+          position: static;
+          justify-content: center;
+          margin-top: 20px;
+          margin-bottom: 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #content-wrapper {
+          padding: 20px 15px;
+        }
+        
+        #footer {
+          padding: 25px 20px;
+        }
+        
+        #credits-logos {
+          gap: 25px;
+        }
+        
+        #credits-logos img {
+          height: 70px;
+        }
+        
+        #language-switcher {
+          position: static;
+          justify-content: center;
+          margin-top: 15px;
+          margin-bottom: 0;
+        }
+      }
+    </style>
 </head>
 <body>
+    <div id="content-wrapper">
+      <div id="logo-container">
+        <img src="Images/Logo_Trailtool.png" alt="TrailTool Logo" class="responsive-logo">
+      </div>
+
+      <!-- Embed game.html with fullscreen capability -->
+      <div id="game-frame">
+        <iframe id="game-iframe" src="game.html" allowfullscreen="true"></iframe>
+        <button id="fullscreen-button">
+          <img src="TemplateData/fullscreen-button.png" alt="Fullscreen">
+        </button>
+      </div>
+
+      <!-- Updated Footer -->
+      <div id="footer">
+        <div id="footer-content">
+          <div class="footer-section">
+            <h3 data-en="Contact" data-nl="Contact">Contact</h3>
+            <p><strong data-en="Email:" data-nl="E-mail:">E-mail:</strong></p>
+            <a href="mailto:futureproofeducation@avans.nl">futureproofeducation@avans.nl</a>
+            <p><strong data-en="Follow us:" data-nl="Volg ons:">Volg ons:</strong></p>
+            <div id="social-media">
+              <a href="https://www.linkedin.com/school/avans-hogeschool" target="_blank" title="LinkedIn">in</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3 data-en="License" data-nl="Licentie">Licentie</h3>
+            <div id="cc-license">
+              <img src="Images/creative_commons.png" alt="Creative Commons">
+            </div>
+            <p><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0</a></p>
+            <p data-en="This work has a CC BY NC Licence" data-nl="Dit werk heeft een CC BY NC licentie">Dit werk heeft een CC BY NC licentie</p>
+          </div>
+
+          <div class="footer-section">
+            <h3 data-en="Newsletter" data-nl="Nieuwsbrief">Nieuwsbrief</h3>
+            <p data-en="Subscribe for research updates and news:" data-nl="Abonneer voor onderzoeksupdates en nieuws:">Abonneer voor onderzoeksupdates en nieuws:</p>
+            <div id="newsletter-form">
+              <input type="email" data-en-placeholder="Your email address" data-nl-placeholder="Uw e-mailadres" placeholder="Uw e-mailadres" required>
+              <button type="submit" data-en="Subscribe" data-nl="Abonneren">Abonneren</button>
+            </div>
+            <p style="font-size: 0.8em; margin-top: 10px; opacity: 0.8;" data-en="Stay updated with our latest research findings and TrailTool developments." data-nl="Blijf op de hoogte van onze laatste onderzoeksbevindingen en TrailTool ontwikkelingen.">Blijf op de hoogte van onze laatste onderzoeksbevindingen en TrailTool ontwikkelingen.</p>
+          </div>
+        </div>
+
+        <!-- Credits Logos Section -->
+        <div id="credits-logos">
+          <div class="logo-item">
+            <img src="Images/avans-hogeschool-logo.png" alt="Avans TSO Logo">
+            <span>Avans Transdisciplinair Samenwerken in Onderwijs</span>
+          </div>
+  <div class="logo-item">
+  <a href="https://dreamnexus.digital" target="_blank" rel="noopener noreferrer">
+    <img src="Images/Dream Nexus Logo.png" alt="Dream Nexus Logo">
+  </a>
+  <span>Dream Nexus</span>
+</div>
+
+          <div class="logo-item">
+            <img src="Images/Unity-Logo.png" alt="Unity Logo">
+            <span data-en="Game Engine" data-nl="Game Engine">Game Engine</span>
+          </div>
+        </div>
+
+        <div id="copyright">
+          <span data-en="© 2025 TrailTool | Developed by Dream Nexus in collaboration with Avans TSO" data-nl="© 2025 TrailTool | Ontwikkeld door Dream Nexus in samenwerking met Avans TSO">© 2025 TrailTool | Ontwikkeld door <a href="http://Dreamnexus.digital" target="_blank">Dream Nexus</a> in samenwerking met Avans TSO</span>
+        </div>
+        
+        <!-- Language Switcher for Mobile -->
+        <div id="language-switcher">
+          <button id="lang-en" onclick="switchLanguage('en')">EN</button>
+          <button id="lang-nl" class="active" onclick="switchLanguage('nl')">NL</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const fullscreenButton = document.getElementById('fullscreen-button');
+      const gameIframe = document.getElementById('game-iframe');
+
+      fullscreenButton.addEventListener('click', () => {
+        if (gameIframe.requestFullscreen) {
+          gameIframe.requestFullscreen();
+        } else if (gameIframe.mozRequestFullScreen) { // Firefox
+          gameIframe.mozRequestFullScreen();
+        } else if (gameIframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
+          gameIframe.webkitRequestFullscreen();
+        } else if (gameIframe.msRequestFullscreen) { // IE/Edge
+          gameIframe.msRequestFullscreen();
+        }
+      });
+
+      // Language switching functionality
+      let currentLanguage = 'nl';
+
+      function switchLanguage(lang) {
+        currentLanguage = lang;
+        
+        // Update button states
+        document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+        document.getElementById('lang-nl').classList.toggle('active', lang === 'nl');
+        
+        // Update all text elements
+        const elements = document.querySelectorAll('[data-en][data-nl]');
+        elements.forEach(element => {
+          const text = element.getAttribute(`data-${lang}`);
+          if (text) {
+            element.textContent = text;
+          }
+        });
+        
+        // Update placeholder text
+        const emailInput = document.querySelector('#newsletter-form input[type="email"]');
+        if (emailInput) {
+          const placeholder = emailInput.getAttribute(`data-${lang}-placeholder`);
+          if (placeholder) {
+            emailInput.placeholder = placeholder;
+          }
+        }
+      }
+
+      // Newsletter form functionality
+      const newsletterForm = document.querySelector('#newsletter-form');
+      const emailInput = newsletterForm.querySelector('input[type="email"]');
+      const submitButton = newsletterForm.querySelector('button');
+
+      submitButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        
+        if (email && email.includes('@')) {
+          const successMessage = currentLanguage === 'en' 
+            ? 'Thank you for subscribing! We\'ll keep you updated on our research and TrailTool developments.'
+            : 'Bedankt voor uw abonnement! We houden u op de hoogte van ons onderzoek en TrailTool ontwikkelingen.';
+          alert(successMessage);
+          emailInput.value = '';
+        } else {
+          const errorMessage = currentLanguage === 'en'
+            ? 'Please enter a valid email address.'
+            : 'Voer een geldig e-mailadres in.';
+          alert(errorMessage);
+        }
+      });
+    </script>
 </body>
 </html>
